@@ -82,13 +82,21 @@ DATABASES = {
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
 
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Tours',
-        'USER': 'Tours',
-        'PASSWORD': 'Tours',
-        'HOST': 'localhost',
-        'PORT': '3306',
+     #'default': {
+    #    'ENGINE': 'django.db.backends.mysql',
+    #    'NAME': 'Tours',
+         #'USER': 'Tours',
+         #'PASSWORD': 'Tours',
+         #'HOST': 'localhost',
+         #'PORT': '3306',
+
+'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'db1aplea77u7d6',
+         'USER': 'fyvxbpebonpgqg',
+         'PASSWORD': 'c4d98567150a6b06348c6e3ea366a22a2dcdc5c4bf832bb0a6f479d4ede7b7ae',
+         'HOST': 'ec2-3-208-157-78.compute-1.amazonaws.com',
+         'PORT': '3306',
     }
 }
 
