@@ -1,2 +1,0 @@
-# bedu-Backend
-App chida
