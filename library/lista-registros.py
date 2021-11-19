@@ -1,7 +1,7 @@
 import click as click
 
-from modelo import obtiene_registros, obtiene_tablas
-from stdout import imprime_registros
+from library.modelo import obtiene_registros, obtiene_tablas
+from library.stdout import imprime_registros
 
 
 @click.command()
