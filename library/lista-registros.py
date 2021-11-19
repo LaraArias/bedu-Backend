@@ -1,4 +1,4 @@
-import click as click
+import clicpwdk as click
 
 from library.modelo import obtiene_registros, obtiene_tablas
 from library.stdout import imprime_registros
