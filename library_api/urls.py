@@ -20,6 +20,8 @@ urlpatterns = [
     path("tour/eliminar/<int:id_tour>/", views.eliminar_tour, name="eliminar_tour"),
 
     path("api/", include(router.urls)),
+    path("api/sum", views.Sum.as_view()),
+    path("api/res", views.Rest.as_view()),
     path("api/auth/", include("rest_framework.urls", namespace="rest_framework")),
 
     path("graphql", GraphQLView.as_view(graphiql=True, schema=schema))

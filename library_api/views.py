@@ -2,7 +2,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-
+from rest_framework.response import Response
+from rest_framework.views import APIView
 # Create your views here.
 # from models import Tour, Zone
 from library_api.models import Tour, Zone, User
@@ -28,6 +29,17 @@ def eliminar_tour(request, id_tour):
 
     return redirect("/")
 
+class Sum(APIView):
+    def get(self, request):
+        query_params = request.query_params
+
+        return Response({'result': int(query_params['n1']) +int(query_params['n2']) }, 200)
+
+
+class Rest(APIView):
+    def get(self, request):
+        query_params = request.query_params
+        return Response({'result': int(query_params['n1']) - int(query_params['n2'])}, 200)
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
